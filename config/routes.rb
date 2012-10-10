@@ -1,17 +1,17 @@
 Lanparty::Application.routes.draw do
-  resources :match_lose_links
+  # resources :match_lose_links
 
-  resources :match_win_links
+  # resources :match_win_links
 
-  resources :match_scores
+  # resources :match_scores
 
-  resources :rounds
+  # resources :rounds
 
   resources :matches
 
   resources :prices
 
-  resources :games
+  # resources :games
 
   resources :users
 
