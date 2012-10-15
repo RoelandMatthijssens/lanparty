@@ -21,11 +21,16 @@ group :assets do
 end
 
 group :development, :test do
-	gem 'rspec', '>= 2.8.1'
-	gem 'rspec-rails', '>= 2.8.1'
+  gem "capybara"
+  gem "launchy"
+  gem 'rspec', '>= 2.8.1'
+  gem 'rspec-rails', '>= 2.8.1'
   gem 'shoulda', '>= 2.11.3'
   gem 'shoulda-matchers'
   gem 'factory_girl_rails', '~> 4.0'
+	gem 'nifty-generators'
+	gem 'bcrypt-ruby', :require => 'bcrypt'
+	gem 'faker'
 end
 
 
@@ -45,3 +50,5 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+gem "mocha", :group => :test

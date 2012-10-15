@@ -1,4 +1,16 @@
 Lanparty::Application.routes.draw do
+	match 'user/edit' => 'users#edit', :as => :edit_current_user
+
+	match 'signup' => 'users#new', :as => :signup
+
+	match 'logout' => 'sessions#destroy', :as => :logout
+
+	match 'login' => 'sessions#new', :as => :login
+
+	resources :sessions
+
+	resources :users
+
 	# resources :match_lose_links
 
 	# resources :match_win_links
@@ -13,19 +25,15 @@ Lanparty::Application.routes.draw do
 
 	resources :games
 
-	resources :users
-
 	resources :compos do
 		put :generate_matches, :on => :member
 	end
-
 
 	resources :barcodes
 
 	resources :items
 
 	match '/', :to => 'compos#index'
-
 
 	# The priority is based upon order of creation:
 	# first created -> highest priority.
@@ -76,7 +84,7 @@ Lanparty::Application.routes.draw do
 
 	# You can have the root of your site routed with "root"
 	# just remember to delete public/index.html.
-	# root :to => 'welcome#index'
+	root :to => 'compos#index'
 
 	# See how all your routes lay out with "rake routes"
 
