@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121009164953) do
+ActiveRecord::Schema.define(:version => 20121012162127) do
 
   create_table "barcodes", :force => true do |t|
     t.string   "code"
@@ -27,8 +27,9 @@ ActiveRecord::Schema.define(:version => 20121009164953) do
     t.time     "time"
     t.integer  "group_size"
     t.integer  "game_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+    t.string   "competition_type"
   end
 
   create_table "games", :force => true do |t|
@@ -88,6 +89,7 @@ ActiveRecord::Schema.define(:version => 20121009164953) do
     t.integer  "compo_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "level"
   end
 
   create_table "users", :force => true do |t|

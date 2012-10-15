@@ -27,7 +27,7 @@ describe ComposController do
     @game = FactoryGirl.create(:game)
   end
   def valid_attributes
-    {:group_size => 1, :slots => 1, :game_id => @game.id, :date_time => "2012-10-10-12-12"}
+    {:group_size => 1, :slots => 1, :game_id => @game.id, :date_time => "2012-10-10-12-12", :competition_type => "MyString"}
   end
 
   # This should return the minimal set of values that should be in the session
