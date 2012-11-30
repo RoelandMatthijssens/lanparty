@@ -1,14 +1,7 @@
-<div id="header">
-	<nav>
-		<ul>
-			<li><%= link_to "Compos", compos_path %></li>
-			<li><%= link_to "Items", items_path %></li>
-			<% if @current_user %>
-				<li><%= link_to "Profile", @current_user %></li>
-				<li><%= link_to "Logout", logout_path %></li>
-			<% else %>
-				<li><%= link_to "Login", login_path %></li>
-			<% end %>
-		</ul>
-	</nav>
+<div class="header">
+	<%= link_to "Home", home_path %>
+	<%= link_to "Stock" %>
+	<%= link_to "History" %>
+	<%= link_to "Personal Tab" %>
+	<%= link_to "Cashier", "", class: "right_link" %>
 </div>

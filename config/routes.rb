@@ -1,5 +1,8 @@
 Lanparty::Application.routes.draw do
 
+	match '/home' => "pages#home"
+	match '/event' => "pages#event"
+
   resources :logs
 
 	match 'user/edit' => 'users#edit', :as => :edit_current_user
@@ -38,8 +41,6 @@ Lanparty::Application.routes.draw do
 	resources :barcodes
 
 	resources :items
-
-	match '/', :to => 'compos#index'
 
 	# The priority is based upon order of creation:
 	# first created -> highest priority.
@@ -90,7 +91,7 @@ Lanparty::Application.routes.draw do
 
 	# You can have the root of your site routed with "root"
 	# just remember to delete public/index.html.
-	root :to => 'compos#index'
+	root :to => 'pages#home'
 
 	# See how all your routes lay out with "rake routes"
 
