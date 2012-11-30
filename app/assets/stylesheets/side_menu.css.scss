@@ -1,0 +1,33 @@
+.content .menu{
+	margin: 5px;
+	float: right;
+	width: 200px;
+	border-radius: 6px;
+	border: 1px solid #6D9C00;
+	a{
+		text-align: center;
+		background:-webkit-gradient( linear, left top, left bottom, color-stop(0, #810051), 
+		color-stop(0.5, #c7007d), 
+		color-stop(1, #810051) );
+		border-radius: 6px;
+		margin: 5px;
+		padding: 35px 0px 35px 0px;
+		color:#6D9C00;
+		font-family:arial;
+		font-size: 20px;
+		font-weight:bold;
+		text-decoration:none;
+		display: block;
+		&:hover{
+			color:#6D9C00;
+			background:-webkit-gradient( linear, left top, left bottom, color-stop(0, #cff76f), 
+			color-stop(0.5, #8bb42d), 
+			color-stop(1, #cff76f) );
+		}
+	}
+	.selected{
+		background:-webkit-gradient( linear, left top, left bottom, color-stop(0, #8bb42d), 
+		color-stop(0.5, #cff76f), 
+		color-stop(1, #8bb42d) );
+	}
+}
